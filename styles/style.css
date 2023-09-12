@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  display: flex;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -16,6 +17,7 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  align-items: center;
 }
 
 h1,
@@ -35,4 +37,234 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 30px;
+  width: 1140px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.content__list {
+  overflow-x: hidden;
+  height: 298px;
+  position: relative;
+}
+
+.content__details {
+  display: grid;
+  gap: 26px;
+  width: max-content;
+  height: max-content;
+}
+
+.result__video-container {
+  height: 386px;
+  width: 711px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
+
+.content__video-card-description-container {
+  width: max-content;
+  height: max-content;
+}
+
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.title {
+  color: #FFF;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.content__video-card-title {
+  width: 200px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__label {
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.search-form__textfield {
+  color: rgba(255, 255, 255, 0.70);
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  background: none;
+  width: 225px;
+  height: 27px;
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  appearance: none;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  outline: 1px solid #FFF;
+  display: inline-block;
+}
+
+.button {
+  color: #FFF;
+  background: none;
+  font-family: "Fira Sans Condensed", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  height: 34px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  margin-top: 20px;
+  width: 194px;
+}
+
+.more-button {
+  width: 399px;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  outline: none;
+  border: 1px solid #fff;
+}
+
+.search-form__checkbox:checked+.search-form__pseudo-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  margin: 2px;
+}
+
+label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background: #545050;
+  text-decoration: none;
+}
+
+.content__card-link {
+  display: block;
+  margin: 2px;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link:active {
+  outline: none;
 }
