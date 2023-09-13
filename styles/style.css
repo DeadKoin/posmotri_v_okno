@@ -17,7 +17,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  align-items: center;
 }
 
 h1,
@@ -40,9 +39,9 @@ ol {
 }
 
 .content {
-  display: flex;
-  justify-content: center;
   align-items: end;
+  display: flex;
+  margin: auto;
   gap: 30px;
   width: 1140px;
 }
@@ -177,10 +176,11 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
+  vertical-align: top;
+  display: inline-flex;
   width: 19px;
   height: 19px;
-  outline: 1px solid #FFF;
-  display: inline-block;
+  border: 1px solid #fff;
 }
 
 .button {
@@ -200,6 +200,7 @@ ol {
 }
 
 .more-button {
+  margin: 2px;
   width: 399px;
 }
 
@@ -208,17 +209,16 @@ ol {
 }
 
 .search-form__textfield:active {
-  outline: none;
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  border: none;
 }
 
 .search-form__checkbox:checked+.search-form__pseudo-checkbox::before {
   content: "";
-  display: inline-block;
   width: 15px;
   height: 15px;
   background-color: #fff;
-  margin: 2px;
+  margin: 1px;
 }
 
 label:has(:focus-visible) {
@@ -267,4 +267,5 @@ label:has(:focus-visible) {
 
 .content__card-link:active {
   outline: none;
+  background-color: #545050;
 }
